@@ -2,13 +2,13 @@ body {
   display: flex;
   justify-content: center;
   background-color: white;
-  background-color: grey;
+  background-color: #e0dcdc;
 }
 
 .container {
-  background-color: grey;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
+
+  /* border-left: 1px solid white;
+  border-right: 1px solid white; */
   width: 80vw;
   min-height: 100vh;
 
@@ -18,5 +18,6 @@ body {
 h1 {
   text-align: center;
   font-family: sans-serif;
-  color: #D3D3D3;
+  color: #c6bfbf;
+
 }
