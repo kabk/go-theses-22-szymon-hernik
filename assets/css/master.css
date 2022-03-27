@@ -1,0 +1,413 @@
+@charset "UTF-8";
+
+
+
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+
+@font-face {
+    font-family: 'Your Font Name';
+    src: url('../fonts/yourfontname/yourfontname-roman.woff2'),
+         url('../fonts/yourfontname/yourfontname-roman.woff'),
+         url('../fonts/yourfontname/yourfontname-roman.eot'),
+         url('../fonts/yourfontname/yourfontname-roman.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/yourfontname/yourfontname-roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Your Font Name';
+    src: url('../fonts/yourfontname/yourfontname-italic.woff2'),
+         url('../fonts/yourfontname/yourfontname-italic.woff'),
+         url('../fonts/yourfontname/yourfontname-italic.eot'),
+         url('../fonts/yourfontname/yourfontname-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/yourfontname/yourfontname-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: block;
+}
+
+
+
+/* VARIABLES */
+
+:root {
+  /* Color settings */
+  --color-background: rgba(238, 245, 219, 1);
+  --color-text: rgba(0,255,100,1);
+  --color-text-link: rgba(0,0,0,0.4);
+  --color-text-link-hover: rgba(148, 194, 147, 0.2);
+  --color-theme-1: rgba(0,50,255,0.8);
+  --color-theme-2: rgba(255,75,0,0.8);
+  --color-theme-3: rgba(255,100,255,0.8);
+  --color-theme-4: rgba(255,0,200,0.8);
+  --color-theme-5: rgba(255,255,0,0.8);
+  /* Font settings */
+  --font-family: 'Your Font Name', 'Helvetica', 'Arial', sans-serif;
+  --font-size: 24px;
+  /* Margins settings */
+  --margin: 1rem;
+}
+
+
+
+/* GENERAL STYLES */
+
+html {
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+body {
+  position:relative;
+  background-color: var(--color-background);
+  font: var(--font-size) var(--font-family);
+  color: var(--color-text);
+  width:100%;
+  height:100%;
+  overflow-y:auto;
+}
+
+a {
+  color: var(--color-text-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-text-link-hover);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  color: var(--color-text-link-hover);
+  text-decoration: none;
+}
+
+h1{
+  /* h1 style */
+}
+
+h2{
+  /* h2 style */
+  display:block;
+  vertical-align: center;
+  width:auto;
+  text-align: center;
+  width:15vw;
+  height:15vw;
+  font-weight: normal;
+  border-radius:50%;
+  font-size:1rem;
+  line-height: 15vw;
+  padding:1rem;
+  background-color:transparent;
+  color:var(--color-background);
+  box-shadow: 0 0 1rem 1rem var(--font-color-link);
+
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+
+  -webkit-transition: transform 125ms ease-in-out 0ms;
+  -moz-transition: transform 125ms ease-in-out 0ms;
+  transition: transform 125ms ease-in-out 0ms;
+
+}
+
+h2:hover{
+  -webkit-transform: scale(1.5) rotate(180deg);
+  -moz-transform: scale(1.5) rotate(180deg);
+  transform: scale(1.5) rotate(180deg);
+}
+
+h2:first-of-type{
+  align-self:end;
+  color:var(--color-theme-1);
+  box-shadow: 0 0 1rem 1rem var(--color-theme-1);
+}
+
+h2:nth-of-type(2){
+  align-self:center;
+  color:var(--color-theme-2);
+  box-shadow: 0 0 1rem 1rem var(--color-theme-2);
+}
+
+h2:nth-of-type(3){
+  align-self:start;
+  color:var(--color-theme-3);
+  box-shadow: 0 0 1rem 1rem var(--color-theme-3);
+}
+
+h2:nth-of-type(4){
+  align-self:end;
+  color:var(--color-theme-4);
+  box-shadow: 0 0 1rem 1rem var(--color-theme-4);
+}
+
+h2:nth-of-type(5){
+  align-self:start;
+  color:var(--color-theme-5);
+  box-shadow: 0 0 1rem 1rem var(--color-theme-5);
+}
+
+h3{
+  /* h3 style */
+}
+
+h4, h5, h6{
+  /* h4-h5-h6 style */
+}
+
+p{
+  /* paragraph style */
+  font-size:0.875rem;
+  line-height:125%;
+}
+
+ol, ul{
+  /* ordered list and unordered list styles */
+}
+
+blockquote{
+  /* blockquote element style */
+}
+
+hr{
+  /* horizontal rule style */
+  border:none;
+  border-bottom:0.25rem dotted var(--color-text);
+}
+
+
+
+/* PAGE STYLES */
+
+/* page structure */
+
+div.page-wrapper {
+  /* the element that 'wraps' everything */
+  padding: var(--margin);
+}
+
+/* navigation */
+
+header{
+  text-align: center;
+}
+
+header h1{
+  display:block;
+  font-size:6vw;
+  line-height:100%;
+  font-weight:normal;
+  width:100%;
+  margin:0;padding:0;
+  /* background-color: var(--color-text-link-hover); */
+  padding:1rem;
+  padding-bottom:0.5rem;
+
+}
+
+header p{
+  color:var(--color-text-link);
+  font-size:3rem;
+  margin:0;padding:0;
+  margin-top:0.5rem;
+  margin-bottom:0.5rem;
+}
+
+header p strong{
+  font-weight:normal;
+  text-decoration:underline;
+}
+
+nav{
+  /* what goes inside the navigation part of the page */
+  text-transform:lowercase;
+}
+
+nav ol, nav ul{
+  font-size:4rem;
+  letter-spacing: 0rem;
+  padding-left:0;
+}
+
+nav ol li, nav ul li{
+  list-style-type: none;
+  margin:0;padding:0;
+}
+
+nav ol li a, nav ul li a{
+  color:var(--color-text-link);
+  text-decoration: none;
+  letter-spacing: -0.125rem;
+  padding-left:0;
+  -webkit-transition: letter-spacing 100ms ease-in-out 0ms, padding 100ms ease-in-out 0ms;
+  -moz-transition: letter-spacing 100ms ease-in-out 0ms, padding 100ms ease-in-out 0ms;
+  transition: letter-spacing 100ms ease-in-out 0ms, padding 100ms ease-in-out 0ms;
+}
+
+nav ol li a:hover, nav ul li a:hover{
+  color: var(--color-text-link);
+  text-decoration: none;
+  letter-spacing: 0.75rem;
+  padding-left:0.75rem;
+}
+
+/* content */
+
+main{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align:start;
+  padding-left:25%;
+  padding-right:25%;
+  box-sizing: content-box;
+}
+
+footer{
+  margin-top:5rem;
+}
+
+
+
+
+
+
+/* GENERAL USABILITY */
+
+/* hide desktop mobile etc */
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+/* if you want to hide something visually but want to keep it readable / accessible for screen readers (sr) */
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/* responsive typeface */
+
+@media (max-width: 298px) {
+  :root{ --font-size: 15px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 299px) and (max-width: 339px) {
+  :root{ --font-size: 16px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 340px) and (max-width: 439px) {
+  :root{ --font-size: 17px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 440px) and (max-width: 599px) {
+  :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 600px) and (max-width: 779px) {
+  :root{ --font-size: 19px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 780px) and (max-width: 992px) {
+  :root{ --font-size: 20px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  :root{ --font-size: 22px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1201px) and (max-width: 1319px) {
+  :root{ --font-size: 24px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1320px) and (max-width: 1619px) {
+  :root{ --font-size: 26px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1620px) and (max-width: 1879px) {
+  :root{ --font-size: 28px; } html, body {font: var(--font-size) var(--font-family);}
+}
+@media (min-width: 1880px) {
+  :root{ --font-size: 30px; } html, body {font: var(--font-size) var(--font-family);}
+}
+
+
+
+/* website media queries */
+
+@media (max-width: 779px) {
+
+  /* styles for screen sizes 779px, should covers 'mobile' and 'tablet' */
+  /* style this one first and then use the two others to 'override' some styles (exceptions/details) */
+
+  h2{
+    /* h2 style */
+    width:25vw;
+    height:25vw;
+    line-height: 25vw;
+  }
+
+  header p{
+    font-size:1.5rem;
+  }
+
+  nav ol, nav ul{
+    font-size:2rem;
+  }
+
+  nav ol li a, nav ul li a{
+    letter-spacing: -0.0625rem;
+  }
+
+  main{
+    padding-left:0%;
+    padding-right:0%;
+  }
+
+  /* utilities */
+
+  .desktop{display:none!important;}
+  .mobile{display:block;}
+
+}
+
+
+
+@media (max-width: 339px) {
+
+  /* use this query to apply style changes to smaller smartphones sizes (like an iPhone 5S or SE 2016), max size of 339px */
+
+}
+
+
+
+@media (max-width: 779px) and (orientation: landscape) {
+
+  /* use this query to apply style changes for 'mobile' screen sizes that are flipped in 'landscape' mode */
+
+}
+
+
+
+@media (min-width: 780px) and (max-width: 992px) {
+
+  /* use this query to apply style for 'small' desktop screens */
+
+}
