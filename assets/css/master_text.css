@@ -146,10 +146,15 @@ div.page-wrapper {
 }
 div.fragments-container {
   display: block;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 
 div.fragments {
+  width: calc(100vw - 2*var(--margin))
   padding: var(--margin);
   background-color: var(--color-background);
   z-index: 10;
@@ -159,7 +164,7 @@ div.fragments {
   font-size: 12px;
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  /* width: 100vw; */
   height: 20vh;
   overflow-x: scroll;
 
