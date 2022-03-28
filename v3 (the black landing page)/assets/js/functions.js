@@ -7,10 +7,11 @@ $(document).ready(function() {
 function scrollProgressBar () {
 
     //height of the main text container
-    let scrollDistance = -(mainText.getBoundingClientRect().top  - 200);
+    let scrollDistance = -(mainText.getBoundingClientRect().top);
     let progressPercentage =
         (scrollDistance /
-            (mainText.getBoundingClientRect().height )) * 100;
+            (mainText.getBoundingClientRect().height -
+                document.documentElement.clientHeight)) * 100;
 
     let val = Math.floor(progressPercentage);
 
@@ -54,7 +55,6 @@ window.addEventListener('scroll', scrollProgressBar);
 // }
 //
 // assignWidth()
-
 
 
 

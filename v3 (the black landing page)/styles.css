@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  background-color: #e0dcdc;
+}
+
+.container {
+
+  /* border-left: 1px solid white;
+  border-right: 1px solid white; */
+  width: 80vw;
+  min-height: 100vh;
+
+
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  color: #c6bfbf;
+
+}

@@ -1,6 +1,19 @@
 @charset "UTF-8";
 
 
+.overlay-color {
+  position: absolute;
+  /* background-blend-mode: color; */
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgb(182, 139, 222);
+  mix-blend-mode: color-burn;
+  background-color: saddlebrown;
+}
+
 
 /* @FONT FACE (enable the use of 'custom fonts' inside your document) */
 
@@ -24,6 +37,13 @@
     font-style: italic;
     font-display: block;
 }
+@font-face {
+    font-family: 'Rando-Regular';
+    src: url('../fonts/Rando/Rando-Regular.ttf') format('truetype');
+    font-weight: normal;
+    /* font-style: italic; */
+    font-display: block;
+}
 
 
 
@@ -31,8 +51,10 @@
 
 :root {
   /* Color settings */
-  --color-background: rgba(219, 219, 219, 1);
-  --color-text: rgba(91, 91, 91, 1);
+  /* --color-background: rgba(219, 219, 219, 1); */
+  --color-background: #7e5acb;
+  /* --color-text: rgba(91, 91, 91, 1); */
+  --color-text: rgba(249, 249, 249, 1);
   --color-text-link: rgba(0,0,0,0.4);
   --color-text-link-hover: rgba(148, 194, 147, 0.2);
   --color-theme-1: rgba(0,50,255,0.8);
@@ -41,11 +63,12 @@
   --color-theme-4: rgba(255,0,200,0.8);
   --color-theme-5: rgba(255,255,0,0.8);
   /* Font settings */
-  --font-family: 'Your Font Name', 'Helvetica', 'Arial', sans-serif;
+  --font-family: 'Rando-Regular', 'Helvetica', 'Arial', sans-serif;
+  --font-family-headline_2: 'Rando-Regular', 'Helvetica', 'Arial', sans-serif;
   --font-family-fragments: 'Karla', 'Helvetica', 'Arial', sans-serif;
-  --font-size: 24px;
+  --font-size: 40px;
   /* Margins settings */
-  --margin: 1rem;
+  --margin: 1rem ;
 }
 
 
@@ -90,8 +113,10 @@ h1{
 
 h2{
 
-  font-size:.6rem;
-  line-height: 4vw;
+  font-size: .8em;
+  text-transform: uppercase;
+  /* line-height: 4vw; */
+  text-align: center;
 
 }
 
@@ -109,8 +134,8 @@ h4, h5, h6{
 p{
   max-width: 100%;
   /* paragraph style */
-  font-size:0.675rem;
-  line-height:125%;
+  font-size: .7em;
+  line-height:145%;
 }
 
 ol, ul{
@@ -141,20 +166,31 @@ img {
 div.page-wrapper {
   /* the element that 'wraps' everything */
   padding: var(--margin);
-  position: relative;
+
 
 }
-div.fragments-container {
-  display: block;
+
+
+section.fragments-container {
+  height: calc(20vh + 2*var(--margin));
+  left: 0;
+  top: 0;
+  background-color: yellow;
   width: 100vw;
+  max-width: 100vw;
   margin: 0;
   padding: 0;
   position: relative;
+  overflow-x: scroll;
 }
 
 
+#fragments {
+  width: auto;
+  /* width: calc(100vw - 2*var(--margin)) */
+}
 div.fragments {
-  width: calc(100vw - 2*var(--margin))
+
   padding: var(--margin);
   background-color: var(--color-background);
   z-index: 10;
@@ -166,43 +202,85 @@ div.fragments {
   flex-direction: row;
   /* width: 100vw; */
   height: 20vh;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
+  border-bottom: 2px dotted #000;
 
 }
 div.fragments p {
   width: 100%;
-
   font: var(--font-size) var(--font-family-fragments);
   font-size: 12px;
   color: var(--color-text);
 }
 div.fragment {
-  width: 30vw;
+  width: 20vw;
   /* background-color: yellow; */
   margin: 0 140px;
   flex-basis: 300px;
   flex-grow: 0;
   flex-shrink: 0;
+  display: flex;
+}
+div.fragment:hover p{
+  color: black;
+}
+.fragment .crookedline {
+  display: inline-block;
+  border: none;
+  width: 3em;
+  height: 12em;
+  position: relative;
+}
+.crookedline:after {
+  content: "";
+    position: absolute;
+    border-top: 2px dotted #000;
+    width: 5em;
+    transform: rotate(104deg);
+    transform-origin: 0.25em 2em 0;
+}
+
+span.inline-fragment {
+  color: black;
 }
 
 
 /* content */
 
 main{
-  margin-top: 30vh;
+  margin-top: 6vh;
   z-index: 1;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-align:start;
-  padding-left:25%;
-  padding-right:25%;
+  padding-left:10%;
+  padding-right:30%;
   box-sizing: content-box;
+}
+
+.columns-landing {
+  /* background-color: #eeffff;
+  color: #0b1639; */
+  display: flex;
+  padding-left:10%;
+  padding-right:30%;
+
+}
+main .columns {
+  display: flex;
+}
+
+.columns-landing .column img {
+  max-width: 240px;
+  mix-blend-mode: screen;
 }
 
 footer{
 
 }
+
+
 
 
 
