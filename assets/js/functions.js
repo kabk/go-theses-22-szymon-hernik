@@ -13,6 +13,9 @@ $(document).ready(function() {
   // 	parallax();
   // });
   $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+
+
+      document.querySelector(".contents-from-thesis").style.display = "none";
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
         if (target.length) {
