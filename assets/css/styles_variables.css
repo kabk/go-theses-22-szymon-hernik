@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+
+
+
+/* @FONT FACE (enable the use of 'custom fonts' inside your document) */
+
+/* src: url('../fonts/yourfontname/yourfontname-italic.woff2'),
+         url('../fonts/yourfontname/yourfontname-italic.woff'),
+         url('../fonts/yourfontname/yourfontname-italic.eot'),
+         url('../fonts/yourfontname/yourfontname-italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/yourfontname/Karla-Italic[wght].ttf') format('truetype'); */
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/Karla/Karla[wght].ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Karla-italic';
+    src: url('../fonts/Karla/Karla-Italic[wght].ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: block;
+}
+@font-face {
+    font-family: 'Rando-Regular';
+    src: url('../fonts/Rando/Rando-Regular.ttf') format('truetype');
+    font-weight: normal;
+    /* font-style: italic; */
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Rando-Medium';
+    src: url('../fonts/Rando/Rando-Medium.ttf') format('truetype');
+    font-weight: normal;
+    /* font-style: italic; */
+    font-display: block;
+}
+@font-face {
+    font-family: 'Rando-MediumItalic';
+    src: url('../fonts/Rando/Rando-MediumItalic.ttf') format('truetype');
+    font-weight: medium;
+    font-style: italic;
+    font-display: block;
+}
+
+
+
+/* VARIABLES */
+
+:root {
+  /* Color settings */
+  /* --color-background: rgba(219, 219, 219, 1); */
+  --color-background: #000;
+  --color-background-abstract: #ead9d5;
+  /* --color-text: rgba(91, 91, 91, 1); */
+  --color-text: rgba(249, 249, 249, 1);
+  --color-text-main: #d7fa6d;
+  /* --color-text-main-fill: #9062a7; */
+  --color-text-main-fill: #9062a7;
+  --color-text-main-stroke: #d7fa6d;
+  --color-text-span-fill: #9062a7;
+  --color-text-span-stroke: #9062a7;
+  --color-text-navigation: #551c83;
+  --color-text-link: rgba(0,0,0,0.4);
+  --color-text-link-hover: rgba(148, 194, 147, 0.2);
+  --color-theme-1: rgba(0,50,255,0.8);
+  --color-theme-2: rgba(255,75,0,0.8);
+  --color-theme-3: rgba(255,100,255,0.8);
+  --color-theme-4: rgba(255,0,200,0.8);
+  --color-theme-5: rgba(255,255,0,0.8);
+  /* Font settings */
+  --font-family: 'Rando-Medium', 'Helvetica', 'Arial', sans-serif;
+  --font-family-italic: 'Rando-MediumItalic', 'Helvetica', 'Arial', sans-serif;
+  --font-family-headline_2: 'Rando-Regular', 'Helvetica', 'Arial', sans-serif;
+  --font-family-fragments: 'Karla', 'Helvetica', 'Arial', sans-serif;
+  --font-size: 40px;
+  --font-size-abstract: 38px;
+  /* Margins settings */
+  --margin: 1rem ;
+}
