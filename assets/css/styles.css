@@ -200,7 +200,7 @@ div.abstract-text {
 }
 div.abstract-text  p {
 
-  font: var(--font-size-abstract) var(--font-family);
+  font: calc(0.8*var(--font-size-abstract)) var(--font-family);
   line-height: 1.2em;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: .9px;
