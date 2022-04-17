@@ -12,6 +12,13 @@ $(document).ready(function() {
   // window.addEventListener("scroll", function(){
   // 	parallax();
   // });
+
+  $("#links-pages").on("click", function (e){
+    // alert("clicked");
+      e.preventDefault();
+  })
+
+
   $('a[href*=\\#]:not([href=\\#])').on('click', function() {
 
 
@@ -19,10 +26,21 @@ $(document).ready(function() {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
         if (target.length) {
+          console.log(target[0].id)
+
+          if(target[0].id == "stages" ) {
+            sectionStagesPos = document.getElementById("table-of-content").getBoundingClientRect().top;
             $('html,body').animate({
-                scrollTop: target.offset().top
+                scrollTop: sectionStagesPos
             }, 1000);
-            return false;
+            // return false;
+          }
+            else {
+              $('html,body').animate({
+                  scrollTop: target.offset().top
+              }, 1000);
+              // return false;
+            }
         }
     });
 
@@ -114,7 +132,7 @@ $(document).ready(function() {
   //declare the list of elements which should be listened to by the observer
   const boxElList = document.querySelectorAll('span[data-parent]');
   boxElList.forEach((el) => {
-    console.log(el);
+    // console.log(el);
     observer.observe(el);
   })
 

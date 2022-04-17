@@ -213,45 +213,10 @@ div.abstract-text  p {
 }
 
 
-/* .abstract-text p span.diver,
+.abstract-text p span.diver,
 .thesis-text p span.diver {
   font-family: var(--font-family-italic) !important;
-} */
-i {
-  font-family: var(--font-family-italic) !important;
-}
-span.diver{
-  font-family: var(--font-family-italic) !important;
-}
-span.diver-ref {
 
-  font-size: .8em !important;
-  margin-top: 1em;
-  line-height: 1.1em;
-
-  display: block;
-  text-align: left;
-
-}
-span.diver-ref-italic {
-  font-family: var(--font-family-italic) !important;
-  /* margin: 40px 0px 40px 40px !important; */
-
-
-}
-
-.thesis-text p {
-  position: relative;
-}
-
-.thesis-text p span.reference {
-  position: absolute;
-  left: -10%;
-  top: 45%;
-  font: 11px var(--font-family-fragments);
-}
-.thesis-text p span.reference:hover {
-  cursor: pointer;
 }
 
 
@@ -319,12 +284,10 @@ section.contents .stages {
   color: var(--color-text-navigation);
   /* background-color: white; */
 }
-
-
 section.contents .title,
 section.contents .credits {
   position: absolute;
-  left: 12%;
+  left: 10%;
 }
 
 section.contents .title {
@@ -336,9 +299,6 @@ section.contents .title {
 section.contents .credits {
   bottom: 5vh;
   font: 11px var(--font-family-fragments);
-}
-.stages li:hover {
-  text-decoration: underline;
 }
 .credits a {
   text-decoration: underline;
@@ -682,17 +642,6 @@ footer{
 
 
 
-p.bibliography {
-  text-indent: 40px;
-}
-
-p.bibliography a {
-  text-decoration: underline;
-  /* color: var(--color-text-main-stroke); */
-  -webkit-text-fill-color: var(--color-text-main-fill) !important;
-  -webkit-text-stroke-color: var(--color-text-main-stroke);
-  -webkit-text-stroke-width: 0.4px;
-}
 
 
 
@@ -745,38 +694,15 @@ p.bibliography a {
 }
 @media (min-width: 440px) and (max-width: 599px) {
   :root{ --font-size: 18px; } html, body {font: var(--font-size) var(--font-family);}
-  .thesis-text p:not(.opening-quote) { font-size: .95em !important;
-  padding: 0 10%;}
-
-  .thesis-text p.p-indent {
-    padding: 0 12% !important;
-  }
 }
 @media (min-width: 600px) and (max-width: 779px) {
   :root{ --font-size: 19px; } html, body {font: var(--font-size) var(--font-family);}
-  .thesis-text p:not(.opening-quote) { font-size: .9em !important;
-  padding: 0 10%;}
-  .thesis-text p.p-indent {
-    padding: 0 12% !important;
-  }
 }
 @media (min-width: 780px) and (max-width: 992px) {
   :root{ --font-size: 20px; } html, body {font: var(--font-size) var(--font-family);}
-  .thesis-text p:not(.opening-quote) {
-    font-size: .8em;
-  }
-  div.main-columns .main-column:nth-of-type(1) {
-
-    width:24%
-  }
-  div.main-columns .main-column:nth-of-type(2){
-    width: 50%;
-  }
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   :root{ --font-size: 22px; } html, body {font: var(--font-size) var(--font-family);}
-  /* p { font-size: .7em} */
-
 }
 @media (min-width: 1201px) and (max-width: 1319px) {
   :root{ --font-size: 24px; } html, body {font: var(--font-size) var(--font-family);}
@@ -795,80 +721,8 @@ p.bibliography a {
 
 /* website media queries */
 
-@media (max-width: 600px) {
-  section.contents {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items:  flex-start;
-    z-index: 2;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--color-background-abstract);
-
-  }
-
-  section.contents .title,
-  section.contents .credits,
-  section.contents .stages {
-    text-transform: uppercase;
-    color: var(--color-text-navigation);
-    /* background-color: white; */
-  }
-  section.contents .title {
-    position: relative;
-    margin-top: 20%;
-    margin-bottom: 10%;
-    width: auto;
-    top: 0;
-
-  }
-
-  section.contents .credits {
-
-  }
-
-
-  section.contents .stages {
-    align-self: center;
-    width: 80%;
-    font-size: 2em;
-    margin-top: 0vh;
-  }
-  section.contents .stages ul li:nth-of-type(5){
-    display: none;
-
-  }
-  section.contents .stages ul li span{
-    display: none;
-  }
-}
-@media (min-width: 600px) and (max-width: 880px) {
-  section.contents .stages {
-    font-size: 4vw;
-    width: 80vw !important;
-  }
-  section.contents .title {
-    left: 40px;
-  }
-
-}
-@media (min-width: 480px) and (max-width: 599px) {
-  section.contents .stages {
-    font-size: 5vh;
-  }
-  section.contents .title {
-    margin-bottom: 4%;
-  }
-
-}
-@media (min-width: 880px) and (max-width: 1120px) {
-
-  section.contents .title {
-    left: 15%;
-  }
-}
 @media (max-width: 779px) {
+
   /* body {
     height: 100vh;
     height: -webkit-fill-available;
